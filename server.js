@@ -5,21 +5,54 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Gaurav Choudhary',
-    heading: 'Article One',
-    date: 'Sep 19, 2019',
-    content: `
-    <p>
-        This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-    </p>
-    <p>
-        This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-    </p>
-    <p>
-        This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-    </p>`
+var articles = {
+    'article-one': {
+        title: 'Article One | Gaurav Choudhary',
+        heading: 'Article One',
+        date: 'Sep 19, 2019',
+        content: `
+        <p>
+            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>`
+    },
+    'article-two': {
+        title: 'Article Two | Gaurav Choudhary',
+        heading: 'Article Two',
+        date: 'Sep 29, 2019',
+        content: `
+        <p>
+            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>`
+    },
+    'article-three': {
+        title: 'Article Three | Gaurav Choudhary',
+        heading: 'Article Three',
+        date: 'Sep 20, 2020',
+        content: `
+        <p>
+            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>
+        <p>
+            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
+        </p>`
+    }
 };
+
 
 function createTemplate (data) {
     var title = data.title;
@@ -63,8 +96,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res) {
-    res.send(createTemplate(articleOne));
+app.get('/articleName', function(req,res) {
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function(req,res) {
