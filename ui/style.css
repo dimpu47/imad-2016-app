@@ -6,11 +6,14 @@ body {
 
 .center {
     text-align: center;
-    color:green;
 }
 
 .text-big {
     font-size: 300%;
+    text-align: right;
+    color: yellowgreen;
+}
+.g {
     text-align: right;
     color: yellowgreen;
 }
