@@ -6,10 +6,12 @@ body {
 
 .center {
     text-align: center;
+    color:green;
 }
 
 .text-big {
     font-size: 300%;
+    color:green;
 }
 
 .bold {
@@ -31,5 +33,5 @@ body {
 }
 
 .bg {
-    background-image: url(/ui/cream.jpg);
+    background-image: url(/ui/universe.jpg);
 }
