@@ -29,3 +29,7 @@ body {
     padding-right: 8px;
     Font-Family: sans-serif;
 }
+
+.bg {
+    background-image: url(/ui/cream.jpg);
+}
