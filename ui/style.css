@@ -13,10 +13,7 @@ body {
     text-align: right;
     color: yellowgreen;
 }
-.g {
-    color: black;
-    padding-left: 813px;
-}
+
 
 .bold {
     font-weight: bold;
@@ -36,6 +33,3 @@ body {
     Font-Family: sans-serif;
 }
 
-.bg {
-    background-image: url(/ui/universe.jpg);
-}
