@@ -69,7 +69,7 @@ function createTemplate (data) {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
-        <body>
+        <body class='bg>
             <div class="container">
                 <div>
                     <a href="/">Home</a>
@@ -109,6 +109,9 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/ui/cream.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'cream.jpg'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
