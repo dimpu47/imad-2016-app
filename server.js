@@ -69,7 +69,7 @@ function createTemplate (data) {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
-        <body class='bg>
+        <body class='bg'>
             <div class="container">
                 <div>
                     <a href="/">Home</a>
