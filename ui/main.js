@@ -49,8 +49,7 @@ submit.onclick = function () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status===200) {
-                var nameInput = document.getElementById('name');
-                var name = nameInput.value;
+                
                 // cature a list of name and render it as the list.
                 var names = request.responseText;
                 names = JSON.parse(name);
@@ -64,8 +63,10 @@ submit.onclick = function () {
         }
     };
     
-    // make request 
-    request.open('GET', 'http://dimpu47.imad.hasura-app.io/submit-name?name=' name, true);
+    // make request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
+    request.open('GET', 'http://dimpu47.imad.hasura-app.io/submit-name?name='+name, true);
     request.send(null);
     
     
