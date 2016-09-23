@@ -40,8 +40,7 @@ button.onclick = function () {
 };
 
 // Submit Name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     // create request to counter endpoint
@@ -50,6 +49,8 @@ submit.onclick = function () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status===200) {
+                var nameInput = document.getElementById('name');
+                var name = nameInput.value;
                 // cature a list of name and render it as the list.
                 var names = request.responseText;
                 names = JSON.parse(name);
