@@ -1,7 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById('main-text');
-
-element.InnerHTML = 'New Value';
+element.innerHTML = 'New Value';
 
 //madi's movement
 var img = document.getElementById('madi');
