@@ -24,15 +24,17 @@ button.onclick = function () {
     // create request to counter endpoint
     var request = new XMLHttpRequest();
     // Capture the response and store it in a variable
-    if (request.onreadystatechange === XMLHttpRequest.DONE){
-     if (request.status===200) {
-         var counter = request.responseText;
-         var span = document.getElementById('count');
-         span.innerHTML = counter.toString();
-     }   
-    }
+    request.onreadystatechange = function () {
+        if (request.onreadystatechange === XMLHttpRequest.DONE){
+            if (request.status===200) {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+    
     // make request
     request.open('GET', 'http://dimpu47.imad.hasura-app.io/counter', true);
     request.send(null);
-    
 };
