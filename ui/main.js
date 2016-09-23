@@ -1,4 +1,6 @@
 console.log('Loaded!');
+/*
+// changing html-value
 var element = document.getElementById('main-text');
 element.innerHTML = 'New Value';
 
@@ -12,3 +14,4 @@ function moveRight() {
 img.onclick = function () { 
     var interval = setInterval(moveRight, 50);
 };
+*/
