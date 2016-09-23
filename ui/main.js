@@ -40,7 +40,6 @@ button.onclick = function () {
 };
 
 // Submit Name
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     // create request to counter endpoint
@@ -52,7 +51,7 @@ submit.onclick = function () {
                 
                 // cature a list of name and render it as the list.
                 var names = request.responseText;
-                names = JSON.parse(name);
+                names = JSON.parse(names);
                 var list = '';
                 for (var i=0; i<names.length;i++) {
                   list += '<li>'+names[i]+'</li>';
