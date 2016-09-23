@@ -44,15 +44,14 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('sbmit_btn');
 submit.onclick = function () {
-  // Make a reuest to the server and send the name
-  
-  // cature a list of name and render it as the list.
-  var names = ['name1', 'name3', 'name3', 'name4'];
-  var list = '';
-  for (var i=0; i<names.length;i++) {
+    // Make a reuest to the server and send the name
+    
+    // cature a list of name and render it as the list.
+    var names = ['name1', 'name3', 'name3', 'name4'];
+    var list = '';
+    for (var i=0; i<names.length;i++) {
       list += '<li>' + names[i]+'</li>';
-  }
-  var ul = document.getElementById('namelist');
-  ul.innerHTML = list;
-  
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
 };
