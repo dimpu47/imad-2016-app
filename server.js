@@ -94,7 +94,7 @@ function createTemplate (data) {
 var counter=0;
 app.get('/counter', function(req,res){
  counter += 1;
- res.snd(counter,toString());
+ res.send(counter,toString());
 });   
 
 app.get('/', function (req, res) {
