@@ -16,6 +16,8 @@ img.onclick = function () {
 };
 */
 
+
+
 // counter code
 
 var button = document.getElementById('counter');
@@ -38,6 +40,9 @@ button.onclick = function () {
     request.open('GET', 'http://dimpu47.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+
+
 
 // Submit Name
 var submit = document.getElementById('submit_btn');
