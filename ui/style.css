@@ -12,6 +12,10 @@ body {
     text-align: right;
 }
 
+.left {
+    text-align: left;
+}
+
 .text-big {
     font-size: 200%;
     color: black;
