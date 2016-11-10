@@ -27,7 +27,7 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 150px;
 }
 
 .container {
@@ -39,4 +39,3 @@ body {
     padding-right: 8px;
     Font-Family: sans-serif;
 }
-
