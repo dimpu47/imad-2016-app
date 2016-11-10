@@ -21,7 +21,7 @@ var articles = {
             This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
         </p>
         `
-        
+
     },
     'article-two': {
         title: 'Article Two | Gaurav Choudhary',
@@ -66,10 +66,11 @@ function createTemplate (data) {
     <html>
         <head>
             <title>
-                ${title}
+                  ${title}
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
+            <link href="ui/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
         </head>
         <body class='bg'>
             <div class="container">
@@ -97,7 +98,7 @@ var counter=0;
 app.get('/counter', function(req,res){
  counter = counter + 1;
  res.send(counter.toString());
-});   
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -108,7 +109,7 @@ app.get('/submit-name', function(req, res) {
     var name = req.query.name;
     names.push(name);
     // JSON
-    res.send(JSON.stringify(names)); 
+    res.send(JSON.stringify(names));
 });
 app.get('/:articleName', function(req,res) {
     var articleName = req.params.articleName;
