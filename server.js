@@ -77,17 +77,17 @@ function createTemplate (data) {
         <body class='bg'>
             <div class="container container-fluid">
                 <div class='jumbotron'>
-                    <div>
+                    <div class="lead">
                     <a href="/">Home</a>
                     </div>
                     <hr/>
-                    <h3>
+                    <h3 class="lead">
                         ${heading}
                     </h3>
-                    <div>
+                    <div class="lead">
                         ${date}
                     </div>
-                    <div>
+                    <div class="lead">
                         ${content}
                     </div>
                 </div>
