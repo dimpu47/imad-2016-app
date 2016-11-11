@@ -161,7 +161,6 @@ app.get('/articles/:articleName', function(req,res) {
           } else {
               var articleData = results.rows[0];
               res.send(createTemplate(articleData));
-              
           }
       }
     });
