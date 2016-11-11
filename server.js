@@ -15,55 +15,7 @@ var config = {
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
 };
 
-var articles = {
-    'article-one': {
-        title: 'Article One | Gaurav Choudhary',
-        heading: 'Article One',
-        date: 'Sep 19, 2019',
-        content: `
-        <p>
-            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of first article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        `
 
-    },
-    'article-two': {
-        title: 'Article Two | Gaurav Choudhary',
-        heading: 'Article Two',
-        date: 'Sep 29, 2019',
-        content: `
-        <p>
-            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of second article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>`
-    },
-    'article-three': {
-        title: 'Article Three | Gaurav Choudhary',
-        heading: 'Article Three',
-        date: 'Sep 20, 2020',
-        content: `
-        <p>
-            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>
-        <p>
-            This is the content of Third article from the future. Guess what? There's No apocalypse ! You will live to die into Eternity.
-        </p>`
-    }
-};
 
 
 function createTemplate (data) {
