@@ -9,6 +9,7 @@ var config = {
   user: 'dimpu47', //env var: PGUSER 
   database: 'dimpu47', //env var: PGDATABASE 
   password: process.env.DB_PASSWORD, //env var: PGPASSWORD 
+  host: 'db.imad.hasura-app.io',
   port: 5432, //env var: PGPORT 
   max: 10, // max number of clients in the pool 
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
