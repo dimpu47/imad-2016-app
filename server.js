@@ -130,10 +130,13 @@ app.get('/counter', function(req,res){
  res.send(counter.toString());
 });
 
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var names=[];
+
+
 app.get('/submit-name', function(req, res) {
     // Get the name from the request
     var name = req.query.name;
@@ -141,6 +144,8 @@ app.get('/submit-name', function(req, res) {
     // JSON
     res.send(JSON.stringify(names));
 });
+
+
 app.get('/articles/:articleName', function(req,res) {
     // var articleName = req.params.articleName;
     
@@ -153,7 +158,7 @@ app.get('/articles/:articleName', function(req,res) {
               res.status(404).send('Article Not Found');
               
           } else {
-              var articleData = results.row[0];
+              var articleData = results.rows[0];
               res.send(createTemplate(articleData));
               
           }
