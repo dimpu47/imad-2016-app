@@ -82,7 +82,7 @@ function createTemplate (data) {
             <link href="/ui/style.css" rel="stylesheet" />
             
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/7f7c7f338a.js"></script>
+            <script src="https://use.fontawesome.com/7f7c7f338a.js"></script>
         </head>
         <body class='bg'>
             <div class="container container-fluid">
