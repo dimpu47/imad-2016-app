@@ -1,9 +1,18 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
+
+var config = {
+  user: 'dimpu47', //env var: PGUSER 
+  database: 'dimpu47', //env var: PGDATABASE 
+  password: process.env.DB_PASSWORD, //env var: PGPASSWORD 
+  port: 5432, //env var: PGPORT 
+  max: 10, // max number of clients in the pool 
+  idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
+};
 
 var articles = {
     'article-one': {
@@ -98,6 +107,20 @@ function createTemplate (data) {
     `;
     return htmlTemplate;
 }
+
+var pool = new Pool(config);
+app.get('/test-db', function (req, res) {
+    // make request
+    pool.query('SELECT * FROM test', function (err, results) {
+       if (err) {
+           res.status(500).send(err.toString());
+       } 
+       res.send(JSON.stringify(results));
+    });
+
+    
+    // respond with results
+});
 
 var counter=0;
 app.get('/counter', function(req,res){
