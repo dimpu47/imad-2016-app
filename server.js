@@ -130,8 +130,8 @@ app.post('/login',function(req,res){
                var dbString = result.rows[0].password;
                var salt = dbString.split('$')[2];
                var hashedPassword = hash(password,salt);
-               if(hashedPassword === dbString){
-                   req.session.auth= {userId: result.rows[0].id};
+               if (hashedPassword === dbString) {
+                   req.session.auth={userId: result.rows[0].id};
                    res.send('credentials correct.');
                     
                } else {
@@ -163,8 +163,8 @@ app.get('/logout',function (req,res){
     
 });
 
-var pool = new Pool(config);
 
+var pool = new Pool(config);
 app.get('/get-articles', function (req, res) {
 
    pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
