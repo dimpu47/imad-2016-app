@@ -76,7 +76,7 @@ submit.onclick = function () {
     
 };
 
-// Submit Name
+// Submit username and password
 var submit = document.getElementById('submit_btn1');
 submit.onclick= function(){
     
