@@ -81,26 +81,26 @@ var submit = document.getElementById('submit_btn1');
 submit.onclick= function(){
     
     var request = new XMLHttpRequest(); 
-    request.onreadystatechange = function(){
+    request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE){
-         if(request.status === 200){
+         if (request.status === 200) {
              
              console.log('user loged in');
              alert("Logged in Successfully");
             //  window.location.href ='/info';
          }else {
-             if(request.status==403){
+             if (request.status==403) {
                  alert("Invalid password/Username");
                  submit.value = 'Invalid credentials. Try again?';
              }else {
-             if(request.status==500){
+             if (request.status==500) {
                  alert("Internal Server Error");
              }
           }
          }
-     }
+    }
      
- };
+    };
  
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
