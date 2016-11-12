@@ -3,8 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-var app = express();
-app.use(morgan('combined'));
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
   user: 'dimpu47', //env var: PGUSER 
@@ -16,6 +16,16 @@ var config = {
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
 };
 
+
+
+var app = express();
+app.use(morgan('combined'));
+
+app.use(bodyParser.json());
+app.use(session({
+   secret:'someRandomValue',
+   cookie:{maxAge: 1000*60*24*30}
+}));
 
 
 
