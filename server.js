@@ -217,6 +217,9 @@ app.post('/submit-comment/:articleName', function (req, res) {
     }
 });
 
+app.get('/info', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'info.html'));
+});
 
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
@@ -278,9 +281,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/info', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'info.html'));
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
