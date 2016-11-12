@@ -77,7 +77,7 @@ submit.onclick = function () {
 };
 
 // Submit Name
-var submit = document.getElementById('submit_btnL');
+var submit = document.getElementById('submit_btn1');
 submit.onclick= function(){
 
      var request = new XMLHttpRequest(); 
