@@ -112,6 +112,3 @@ submit.onclick= function(){
  submit.value = 'Logging in...'; 
    
 };
-    
-    
-};
