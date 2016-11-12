@@ -290,6 +290,10 @@ app.get('/ui/article.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.js')); 
 });
 
+app.get('/ui/info.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'info.js'));
+});
+
 app.get('/ui/universe.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'universe.jpg'));
 });
