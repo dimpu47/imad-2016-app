@@ -87,12 +87,12 @@ submit.onclick= function(){
              
              console.log('user loged in');
              alert("Logged in Successfully");
-            //  window.location.href ='/info';
+             window.location.href ='/info';
          }else {
              if (request.status==403) {
                  alert("Invalid password/Username");
                  submit.value = 'Invalid credentials. Try again?';
-             }else {
+             } else {
              if (request.status==500) {
                  alert("Internal Server Error");
              }
