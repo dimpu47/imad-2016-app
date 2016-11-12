@@ -84,9 +84,7 @@ function createTemplate (data) {
 }
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+
 
 function hash(input, salt) {
     var hashed = crypto.pbkdf2sync(input, salt, 10000, 512, 'sha512');
@@ -169,12 +167,20 @@ app.get('/articles/:articleName', function(req,res) {
     
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+app.get('/ui/article.js', function (req, res) { 
+  res.sendFile(path.join(__dirname, 'ui', 'article.js')); 
 });
 
 app.get('/ui/universe.jpg', function (req, res) {
