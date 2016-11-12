@@ -10,9 +10,9 @@ function loadArticles () {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
                  
-                 content += `<div class="gart"> <li class="list-unstyled list-group-item">
+                 content += `<div class="gart"><center> <li class="list-unstyled list-group-item">
                     <a class="btn btn-primary" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li></div> </br>`;
+                    (${articleData[i].date.split('T')[0]})</li></center></div> </br>`;
                  
                  
                 }
