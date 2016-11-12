@@ -86,8 +86,8 @@ submit.onclick= function(){
          if(request.status === 200){
              
              console.log('user loged in');
-             alert("Login Successfully");
-             window.location.href ='/info';
+             alert("Logged in Successfully");
+            //  window.location.href ='/info';
          }else {
              if(request.status==403){
                  alert("Invalid password/Username");
