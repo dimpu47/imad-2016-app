@@ -22,6 +22,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+
 app.use(session({
    secret:'someRandomValue',
    cookie:{maxAge: 1000*60*24*30}
@@ -130,10 +131,10 @@ app.post('/login',function(req,res){
                var salt = dbString.split('$')[2];
                var hashedPassword = hash(password,salt);
                if(hashedPassword === dbString){
-                   req.session.auth={userId: result.rows[0].id};
-                   res.send('LOGIN SUCCESSFUL');
+                   req.session.auth= {userId: result.rows[0].id};
+                   res.send('credentials correct.');
                     
-               }else{
+               } else {
                  res.status(403).send('Username/Password is Invalid');  
                }
            }
