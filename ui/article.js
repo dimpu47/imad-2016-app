@@ -102,3 +102,5 @@ function loadComments () {
 loadLogin();
 
 loadComments();
+loadCommentForm ();
+
