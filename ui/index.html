@@ -17,29 +17,31 @@
                 <li role="presentation"><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <h3 class="text-muted">Profile</h3>
+        <h3 class="text-muted">Personal Learning Projects</h3>
 
         <h5 class="text-muted"><marquee>This is a demo web application made while learning from nptel-course: <cite>Intoduction to Modern Application Development (IMAD)</cite></marquee></h5>
         <hr>
 
         <div class='container container-fluid'>
             <div class="jumbotron">
-
-                <div class="container center">
+                <center><h2>Profile</h2></center> 
+                <div class="container container-fluid center">
                     <img class="img-circle img-medium " id="madi" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAiJAAAAJDg3MjE4YjdlLTI5YmUtNGY3NS1iZDBiLTY2NTU0ZjRmOWFlZQ.jpg" />
                 </div>
-                <div class="container">
+                <div class="container container-fluid">
                     <dl class="dl-horizontal">
                         <dt>Name</dt>
                         <dd>Gaurav Choudhary</dd>
                         <dt>Location</dt>
                         <dd>Mumbai, Powai</dd>
                         <dt>Skill</dt>
-                        <dd>Web Application Development</dd>
+                        <dd>Modern Web Application Development</dd>
                         <dt>Languages</dt>
                         <dd>Nodejs, Expressjs, Angularjs, Python(Flask, Pyramid), Golang</dd>
                         <dt>Databases</dt>
-                        <dd>MongoDB, MsSql, PostgreSQL, SQLite, SQL-Alchemy</dd>
+                        <dd>MongoDB, Mongoose, MsSql, PostgreSQL, SQLite, SQL-Alchemy</dd>
+                        <dt>OS</dt>
+                        <dd>Windows 10, Linux ( Ubuntu 16.04 - xenial )</dd>
                         <dt>Projects</dt>
                         <dd>
                             <ol class="list-unstyled list-inline center">
@@ -47,6 +49,7 @@
                                 <li><a class="fa fa-share-square-o" href="https://library-demo.herokuapp.com/"> library-demo(nodejs &amp; expressjs) </a></li>
                                 <li><a class="fa fa-github" href="https://www.github.com/dimpu47/thermos"> thermos(python &amp; flask) </a></li>
                                 <li><a class="fa fa-github" href="https://github.com/dimpu47/RESTfulAPI-with-nodejs"> RESTfulAPI(nodejs)</a></li>
+                                <li><a class="fa fa-github" href="https://github.com/dimpu47/quick-tutorial-pyramid"> quick-tutorial(python &amp; pyramid) </a></li>
                             </ol>
                         </dd>
                         <dt>contact</dt>
@@ -70,8 +73,11 @@
             <div class='footer jumbotron'>
                 <button id="counter" class="btn btn-primary btn-sm">Click me!</button> This button has been clicked <span id="count"> 0 </span> times.
                 <hr/>
-                <input class="input" type="text" id="name" placeholder="name"></input>
-                <input type="submit" value="Submit" id='submit_btn'></input>
+                <div class="form-inline">
+                    <input class="form-inline input-group form-control" type="text" id="name" placeholder="name"></input>
+                    <input class="form-inline btn btn-success btn-sm" type="submit" value="Submit" id='submit_btn'></input>
+                </div>
+                
                 <ul id="namelist">
                 </ul>
             </div>
