@@ -124,7 +124,7 @@ app.post('/login',function(req,res){
            res.status(500).send(err.toString());
        } else{
            if(result.rows.length === 0){
-               res.status(403).send('Username/Password Invalid');
+               res.status(403).send('Username/Password is Invalid');
            } else {
                var dbString = result.rows[0].password;
                var salt = dbString.split('$')[2];
@@ -134,7 +134,7 @@ app.post('/login',function(req,res){
                    res.send('LOGIN SUCCESSFUL');
                     
                }else{
-                 res.status(403).send('Username/Password Invalid');  
+                 res.status(403).send('Username/Password is Invalid');  
                }
            }
        }
