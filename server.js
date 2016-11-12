@@ -6,6 +6,7 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
+
 var config = {
   user: 'dimpu47', //env var: PGUSER 
   database: 'dimpu47', //env var: PGDATABASE 
@@ -20,7 +21,6 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
 app.use(bodyParser.json());
 app.use(session({
    secret:'someRandomValue',
