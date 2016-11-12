@@ -70,25 +70,28 @@ function createTemplate (data) {
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
-            
+
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/7f7c7f338a.js"></script>
+            <script src="https://use.fontawesome.com/7f7c7f338a.js"></script>
         </head>
         <body class='bg'>
             <div class="container container-fluid">
                 <div class='jumbotron'>
+                    <div class="lead">
                     <a href="/">Home</a>
+                    </div>
+                    <hr/>
+                    <h3 class="lead">
+                        ${heading}
+                    </h3>
+                    <div class="lead">
+                        ${date}
+                    </div>
+                    <div class="lead">
+                        ${content}
+                    </div>
                 </div>
-                <hr/>
-                <h3>
-                    ${heading}
-                </h3>
-                <div>
-                    ${date}
-                </div>
-                <div>
-                    ${content}
-                </div>
+
             </div>
         </body>
     </html>
