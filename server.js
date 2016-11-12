@@ -111,6 +111,110 @@ app.post("/create-user", function (req, res) {
     });
 });
 
+app.post('/login',function(req,res){
+    
+    var username = req.body.username;
+    var password = req.body.password;
+    
+     pool.query('SELECT * FROM "user" WHERE username =$1',[username],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else{
+           if(result.rows.length === 0){
+               res.status(403).send('Username/Password Invalid');
+           } else {
+               var dbString = result.rows[0].password;
+               var salt = dbString.split('$')[2];
+               var hashedPassword = hash(password,salt);
+               if(hashedPassword == dbString){
+                   req.session.auth={userId: result.rows[0].id};
+                   res.send('LOGIN SUCCESSFUL');
+                    
+               }else{
+                 res.status(403).send('Username/Password Invalid');  
+               }
+           }
+       }
+});
+
+});
+
+app.get('/check-login', function (req, res) {
+    if (req.session && req.session.auth && req.session.auth.userId) {
+       pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
+           if (err) {
+              res.status(500).send(err.toString());
+           } else {
+                 res.send(result.rows[0].username);    
+           }
+       });
+    }else {
+       res.status(400).send('You are not logged in');
+   }
+});
+
+app.get('/logout',function (req,res){
+   delete req.session.auth;
+   res.send('<html><body></br><div align="center"><h3>Logged out!</h3><br/><br/><a href="/">Back to home</a> </div></body></html>');
+    
+});
+
+var pool = new Pool(config);
+
+app.get('/get-articles', function (req, res) {
+
+   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+
+
+app.get('/get-comments/:articleName', function (req, res) {
+
+  pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id="user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+
+});
+
+
+
+app.post('/submit-comment/:articleName', function (req, res) {
+
+    if (req.session && req.session.auth && req.session.auth.userId) {
+        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+            if (err) {
+                res.status(500).send(err.toString());
+            } else {
+                if (result.rows.length === 0) {
+                    res.status(400).send('Article not found');
+                } else {
+                    var articleId = result.rows[0].id;
+pool.query("INSERT INTO comment (article_id, user_id, comment) VALUES ($1, $2, $3)", [articleId, req.session.auth.userId,req.body.comment], function (err, result) {
+                            if (err) {
+                               res.status(500).send(err.toString());
+                            } else {
+                                res.status(200).send('Comment inserted!');
+                            }
+                        });
+                }
+            }
+       });     
+    } else {
+        res.status(403).send('Only logged in users can comment');
+    }
+});
+
+
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     // make request
