@@ -1,0 +1,11 @@
+# Personal Learning Project
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This is an exercise to practice and learn concepts of Modern Web Application Development.
+Programming languages used: Nodejs, AJAX, HTML5, CSS | Bootstrap.
+
+Course: Introduction to modern Application development
+An online course by IIT Madras & Hasura
+
+Certificate of completion offered by IIT Madras
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
