@@ -104,7 +104,7 @@ function createTemplate (data) {
                 //MAKING THE REQUEST
                 var commentInput = document.getElementById('input');
                 var co = commentInput.value;
-                     re.open('GET','http://pantharshit00.imad.hasura-app.io/articles?article='+co,true);
+                     re.open('GET','http://dimpu47.imad.hasura-app.io/articles?article='+co,true);
                      re.send(null);
                 };
             </script>
