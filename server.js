@@ -107,7 +107,7 @@ function createTemplate (data) {
                      re.open('GET','http://pantharshit00.imad.hasura-app.io/articles?article='+co,true);
                      re.send(null);
                 };
-       </script>
+            </script>
              
              
         </body>
