@@ -59,11 +59,12 @@ function createTemplate (data) {
                         ${heading}
                     </h3>
                     <div class="lead">
-                        ${date.toDateString()}
-                    </div>
-                    <div class="lead">
                         ${content}
                     </div>
+                    <div class="lead">
+                        <p>${date.toDateString()}</p>
+                    </div>
+                    <br>
                     <hr>
                     
                     <h4 class="lead">Submit your comment</h4>
