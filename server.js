@@ -69,7 +69,7 @@ function createTemplate (data) {
                     
                     <h4 class="lead">Submit your comment</h4>
                      <div id="comments" class="form-group">
-                       <textarea class="form-control" style="height:210px; width:600px;" id="input" placeholder="Your Comment goes here."></textarea>
+                       <textarea class="form-control" style="height:100px; width:650px;" id="input" placeholder="Your Comment goes here."></textarea>
                        <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
                     </div>
                     
