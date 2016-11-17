@@ -81,6 +81,7 @@ function createTemplate (data) {
 
             </div>
              <script type="text/javascript" src="/ui/article.js"></script>
+             <script type="text/javascript" src="/ui/main.js"></script>
         </body>
     </html>
     `;
