@@ -66,13 +66,13 @@ function createTemplate (data) {
                     </div>
                     <hr>
                     
-                    <h3>Submit your comment</h3>
+                    <h4 class="lead">Submit your comment</h4>
                      <div id="comments" class="form-group">
                        <textarea class="form-control" style="height:210px; width:600px;" id="input">Your Comment goes here.</textarea>
                        <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
                     </div>
                     
-                    <ol id="showComment">
+                    <ol id="showComment" class="list-group">
            
                     </ol>
       
@@ -96,7 +96,7 @@ function createTemplate (data) {
                       texts=JSON.parse(texts);
                       var comments='';
                       for(var i=0;i<texts.length;i++){
-                      comments += '<li>'+texts[i]+'<br><br><br>'+d.toDateString()+'<br><hr></li>';
+                      comments += '<li class="list-group-item">'+texts[i]+'<br><br><br>'+d.toDateString()+'<br><hr></li>';
                       }
                       var y = document.getElementById('showComment');
                        y.innerHTML = comments;
