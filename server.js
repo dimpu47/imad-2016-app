@@ -64,14 +64,17 @@ function createTemplate (data) {
                     <div class="lead">
                         ${content}
                     </div>
+                    <hr>
+                    
+                    <h3>Submit your comment</h3>
+                     <div id="comments" class="form-group">
+                       <textarea class="form-control" style="height:210px; width:600px;" id="input">Your Comment goes here.</textarea>
+                       <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
+                    </div>
+                    
                     <ol id="showComment">
            
                     </ol>
-       
-                     <div id="comments" class="form-group">
-                       <textarea class="form-control" style="height:210px; width:500px;" id="input">Your Comment goes here.</textarea>
-                       <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
-                    </div>
       
                 </div>
       
