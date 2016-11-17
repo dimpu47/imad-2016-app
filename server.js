@@ -63,24 +63,51 @@ function createTemplate (data) {
                     </div>
                     <div class="lead">
                         ${content}
-                        
-                        </div class="container form-group">
-                          <hr/>
-                          <h4>Comments</h4>
-                          <div id="comment_form">
-                          </div>
-                          <div id="comments">
-                            <center>Loading comments...</center>
-                        </div>
-                        
                     </div>
-                    
-                    
-                    
+                    <ol id="showComment">
+           
+       </ol>
+       
+         <div id="comments">
+           <textarea style="height:210px; width:770px;" id="input">Your Comment goes here.</textarea>
+           <button type="button" style="margin-top:8px;" id="submitComment">Submit</button>
+       </div>
+      
+       </div>
+      
+       <script>
+       var d = new Date();
+           var submitCom = document.getElementById('submitComment');
+submitCom.onclick = function(){
+    var re = new XMLHttpRequest();//INItIALIZING THE REQUEST
+re.onreadystatechange = function(){
+  if(re.readyState === XMLHttpRequest.DONE)
+  {
+      if(re.status === 200)
+      {
+      var texts =re.responseText;
+      texts=JSON.parse(texts);
+      var comments='';
+      for(var i=0;i<texts.length;i++){
+      comments += '<li>'+texts[i]+'<br><br><br>'+d.toDateString()+'<br><hr></li>';
+      }
+      var y = document.getElementById('showComment');
+       y.innerHTML = comments;
+      }
+  }
+    
+};
+//MAKING THE REQUEST
+var commentInput = document.getElementById('input');
+var co = commentInput.value;
+     re.open('GET','http://pantharshit00.imad.hasura-app.io/articles?article='+co,true);
+     re.send(null);
+};
+       </script>
                 </div>
 
             </div>
-             <script type="text/javascript" src="/ui/article.js"></script>
+             
              
              
         </body>
@@ -180,45 +207,7 @@ app.get('/get-articles', function (req, res) {
 
 
 
-app.get('/get-comments/:articleName', function (req, res) {
 
-  pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id="user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-
-});
-
-
-
-app.post('/submit-comment/:articleName', function (req, res) {
-
-    if (req.session && req.session.auth && req.session.auth.userId) {
-        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
-            if (err) {
-                res.status(500).send(err.toString());
-            } else {
-                if (result.rows.length === 0) {
-                    res.status(400).send('Article not found');
-                } else {
-                    var articleId = result.rows[0].id;
-                    pool.query("INSERT INTO comment (article_id, user_id, comment) VALUES ($1, $2, $3)", [articleId, req.session.auth.userId,req.body.comment], function (err, result) {
-                            if (err) {
-                               res.status(500).send(err.toString());
-                            } else {
-                                res.status(200).send('Comment inserted!');
-                            }
-                        });
-                }
-            }
-       });     
-    } else {
-        res.status(403).send('Only logged in users can comment');
-    }
-});
 
 app.get('/info', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'info.html'));
