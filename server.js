@@ -69,7 +69,7 @@ function createTemplate (data) {
                     </ol>
        
                      <div id="comments">
-                       <textarea style="height:210px; width:770px;" id="input">Your Comment goes here.</textarea>
+                       <textarea style="height:210px; width:500px;" id="input">Your Comment goes here.</textarea>
                        <button type="button" style="margin-top:8px;" id="submitComment">Submit</button>
                     </div>
       
