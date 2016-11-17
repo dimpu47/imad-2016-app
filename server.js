@@ -269,6 +269,7 @@ app.get('/articles/:articleName', function(req,res) {
     
 });
 
+var texts = []
 app.get('/articles',function(req,res){
    var article = req.query.article;
    texts.push(article);
