@@ -100,7 +100,6 @@ function loadComments () {
 
 
 loadLogin();
-
-// loadComments();
+loadComments();
 loadCommentForm();
 
