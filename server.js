@@ -269,6 +269,13 @@ app.get('/articles/:articleName', function(req,res) {
     
 });
 
+app.get('/articles',function(req,res){
+   var article = req.query.article;
+   texts.push(article);
+   res.send(JSON.stringify(texts));
+    
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
