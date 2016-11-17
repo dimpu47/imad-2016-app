@@ -97,7 +97,7 @@ function createTemplate (data) {
                       texts=JSON.parse(texts);
                       var comments='';
                       for(var i=0;i<texts.length;i++){
-                      comments += '<li class="list-group-item">'+texts[i]+'<br><br><br><span class="pull-right"><p>'+d.toDateString()+'</p></span><hr></li>';
+                      comments += '<li class="list-group-item">'+texts[i]+'<br><br><h6><span class="pull-right">'+d.toDateString()+'</span><br></h6><hr></li>';
                       }
                       var y = document.getElementById('showComment');
                        y.innerHTML = comments;
