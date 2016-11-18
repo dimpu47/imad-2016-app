@@ -211,12 +211,10 @@ app.get('/get-articles', function (req, res) {
 });
 
 
-
-
-
 app.get('/info', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'info.html'));
 });
+
 
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
@@ -284,6 +282,10 @@ app.get('/articles',function(req,res){
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/about', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
 });
 
 app.get('/gauravC_resume', function (req, res) {
