@@ -139,7 +139,7 @@ app.post("/create-user", function (req, res) {
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password, salt);
     
-    if (username || password === "") {
+    if (username || password === " ") {
         alert('username or password was left blank.');
     } else {
         
