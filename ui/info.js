@@ -12,10 +12,10 @@ function loadArticles () {
                  
                  content += `<div class="gart">
                                 <li class="list-unstyled list-group-item">
-                                    <center>
-                                        <a class="btn btn-primary" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                                        <span class="pull-right">(${articleData[i].date.split('T')[0]})</span>
-                                    </center>
+
+                                        <a class="btn btn-primary list-group-item-heading" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
+                                        <span class="list-group-item-text">(${articleData[i].date.split('T')[0]})</span>
+                                    
                                 </li>
                             </div>
                             </br>`;
