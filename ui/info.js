@@ -14,7 +14,7 @@ function loadArticles () {
                                 <li class="list-unstyled list-group-item">
                                     <center>
                                         <a class="btn btn-primary" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                                        <span class"pull-right">(${articleData[i].date.split('T')[0]})</span>
+                                        <span class="pull-right">(${articleData[i].date.split('T')[0]})</span>
                                     </center>
                                 </li>
                             </div>
