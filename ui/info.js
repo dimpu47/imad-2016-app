@@ -13,8 +13,9 @@ function loadArticles () {
                  content += `<div class="gart">
                                 <li class="list-unstyled list-group-item">
 
-                                        <a class="btn btn-primary list-group-item-heading" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                                        <span class="list-group-item-text">(${articleData[i].date.split('T')[0]})</span>
+                                        <a class="btn btn-primary list-group-item" href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
+                                        <h4 class="list-group-item-heading">${articleData[i].heading}</h4>
+                                        <p class="list-group-item-text">(${articleData[i].date.split('T')[0]})</p>
                                     
                                 </li>
                             </div>
