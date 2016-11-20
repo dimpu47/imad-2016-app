@@ -70,8 +70,9 @@ function createTemplate (data) {
                     
                     
                      <div id="comments" class="form-group">
-                       <textarea class="form-control" style="height:100px; width:680px;" id="input" placeholder="Add or comment..."></textarea>
-                       <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
+                        <h2>Have something to say?...</h2>   
+                        <textarea class="form-control" style="height:100px; width:680px;" id="input" placeholder="Add or comment..."></textarea>
+                        <button class="btn btn-success" type="button" style="margin-top:8px;" id="submitComment">Submit</button>
                     </div>
                     
                     <ol id="showComment" class="list-group">
