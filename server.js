@@ -55,9 +55,9 @@ function createTemplate (data) {
                     <a href="/">Home</a>
                     </div>
                     <hr/>
-                    <h1 class="lead">
+                    <h2 class="lead">
                         ${heading}
-                    </h1>
+                    </h2>
                     <div class="lead">
                         <h6>${date.toDateString()}</h6>
                     </div>
