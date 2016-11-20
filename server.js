@@ -294,9 +294,9 @@ app.get('/', function (req, res) {
 
 app.get('/about', function (req, res) {
   if (req.session && req.session.auth && req.session.auth.userId) {
-      res.sendFile(path.join(__dirname, 'ui', 'about.html'));
-  } else {
       res.sendFile(path.join(__dirname, 'ui', 'aboutL.html'));
+  } else {
+      res.sendFile(path.join(__dirname, 'ui', 'about.html'));
   }
   
 });
