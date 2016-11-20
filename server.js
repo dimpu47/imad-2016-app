@@ -293,7 +293,12 @@ app.get('/', function (req, res) {
 });
 
 app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+  if (req.session && req.session.auth && req.session.auth.userId) {
+      res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+  } else {
+      res.sendFile(path.join(__dirname, 'ui', 'aboutL.html'));
+  }
+  
 });
 
 app.get('/gauravC_resume', function (req, res) {
