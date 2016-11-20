@@ -60,7 +60,7 @@ button.onclick = function () {
     };
     
     // make request 
-    request.open('GET', 'http://dimpu47.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://dimpu47.imad.hasura-app.io/counter2', true);
     request.send(null);
 };
 
