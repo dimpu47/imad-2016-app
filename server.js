@@ -238,6 +238,12 @@ app.get('/counter', function(req,res){
  res.send(counter.toString());
 });
 
+var counter2=0;
+app.get('/counter2', function(req,res){
+ counter2 = counter2 + 1;
+ res.send(counter2.toString());
+});
+
 
 
 var names=[];
