@@ -195,7 +195,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout',function (req,res){
    delete req.session.auth;
-   res.send('<html><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></head><body class="container container-fluid"></br><div align="container container-fluid"><div class="jumbotron"><h1 class="lead">Logged out!</h1><h2>Hasta La Vista Amigo!</h2><br/><br/><a href="/">Back to home</a> </div> </div></body></html>');
+   res.send('<html><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></head><body class="container container-fluid"></br><div align="container container-fluid"><div class="jumbotron"><h1 class="lead">Hasta La Vista Amigo!</h1><h2>You have been successfully Logged out!</h2><br/><br/><a href="/">Back to home</a> </div> </div></body></html>');
     
 });
 
