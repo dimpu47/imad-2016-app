@@ -210,17 +210,22 @@
 
 
 <body class="container container-fluid">
-	<header class="navbar-header navbar-default header clearfix container" role="banner">
+	<div class="container container-fluid header clearfix container">
+	    <header class="navbar-header navbar-default" role="banner">
 		<div class="container container-fluid">
 			<div class="navbar-header">
-				<a href="/" class="navbar-brand">Home</a>
-			</div>
-			<nav class="nav navbar-right" role="navigation">
+				
 				<ul class="nav navbar-nav">
+				    <li>
+				        <a href="/" class="navbar-brand">Home</a>
+				    </li>
 					<li>
-						<a href="https://drive.google.com/file/d/0B_N4jBp1jgzhYjFMMnBxaENWSFk/view?usp=sharing">Download PDF</a>
+						<a href="https://drive.google.com/file/d/0B_N4jBp1jgzhYjFMMnBxaENWSFk/view?usp=sharing" class="navbar-right">Download PDF</a>
 					</li>
 				</ul>
+			</div>
+			<nav class="nav navbar-right" role="navigation">
+				
 				<!-- <ul class="nav navbar-nav ">
 					<% for(var i=0; i<nav.length;i++){%>
 						<li class="">
@@ -615,6 +620,7 @@
 			</div>
 		</div>
     </div>
+	</div>
 </body>
 
 </html>
