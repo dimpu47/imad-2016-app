@@ -195,7 +195,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout',function (req,res){
    delete req.session.auth;
-   res.send('<html><body></br><div align="center"><h3>Logged out!</h3><br/><br/><a href="/">Back to home</a> </div></body></html>');
+   res.send('<html><body></br><div align="center container container-fluid"><div class="jumbotron"><h3>Logged out!</h3><br/><br/><a href="/">Back to home</a> </div> </div></body></html>');
     
 });
 
