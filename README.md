@@ -1,7 +1,6 @@
 # Personal Learning Project
-[IMAD-Profile/Blog](http://dimpu47.imad.hasura-app.io/)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This is an exercise to practice and learn concepts of Modern Web Application Development.
+This was an exercise to practice and learn concepts of Modern Web Application Development.
 Programming languages used: Nodejs, AJAX, HTML5, CSS | Bootstrap, SQL.
 Database: PostgreSQL
 Course: Introduction to modern Application development
