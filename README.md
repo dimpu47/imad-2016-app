@@ -5,6 +5,6 @@ Programming languages used: Nodejs, AJAX, HTML5, CSS | Bootstrap, SQL.
 Database: PostgreSQL
 Course: Introduction to modern Application development
 An online course by IIT Madras & Hasura
-
+(Current version of this repo is dimpu/imad-app-v2. hosted at http://dimpu47.imad.hasura-app.io/
 Certificate of completion offered by IIT Madras
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
